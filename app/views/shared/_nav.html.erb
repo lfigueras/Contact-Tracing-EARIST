@@ -1,0 +1,18 @@
+<header x-data="{ mobileMenuOpen : false }"  class="flex sticky bg-white flex-wrap flex-row justify-between md:items-center md:space-x-4  border shadow py-6 px-6 shadow mx-auto sticky top-0">
+		<a href="/" class="block">
+		  <span class="sr-only">contact trace</span>
+		  <%= image_tag("deafaultlogo", class: "h-8 md:h8") %>
+		</a>
+		<button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1">
+		  <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+		</button>
+		<nav class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-white shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
+		:class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}"  @click.away="mobileMenuOpen = false">
+		  <a href="#" class="text-gray-700 hover:bg-gray-300 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium" "x-state-description"="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-700 hover:bg-gray-700 hover:text-white&quot;">About</a>
+		  <a href="#" class="text-gray-700 hover:bg-gray-300 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium" "x-state-description"="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-700 hover:bg-gray-700 hover:text-white&quot;">Contact us</a>
+		  
+		  <% if current_user %>
+		  <%= link_to "Logout", destroy_user_session_path, method: :delete, :"x-state-description" => "undefined: &quot;bg-gray-900 text-white&quot; undefined: &quot;text-gray-700 hover:bg-gray-700 hover:text-white&quot;", :class=>"text-gray-700 hover:bg-gray-300 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"  %>
+		 <%end%>
+		  </nav>
+</header>

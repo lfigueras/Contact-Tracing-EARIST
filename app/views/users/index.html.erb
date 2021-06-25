@@ -1,0 +1,139 @@
+
+<div class="w-full rounded overflow-hidden ">
+
+    <div class="container mx-auto xl:w-3/4 lg:w-11/12">
+      <div class="px-6 pt-4">
+        <form action="#" class="flex flex-col space-y-8">
+
+          <div>
+            <h3 class="text-2xl font-semibold">Basic Information</h3>
+            <hr>
+          </div>
+
+          <div class="form-item">
+            <label class="text-xl ">Full Name</label>
+            <input type="text" value="<%= current_user.first_name %> <%= current_user.last_name %>" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2  mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200" disabled>
+
+            </div>
+
+          <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+
+            <div class="form-item w-full">
+              <label class="text-xl ">Email</label>
+              <input type="text" value="<%= current_user.email %>" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled>
+              
+              </div>
+          </div>
+
+          <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+
+          <div class="form-item w-full">
+            <label class="text-xl ">Complete Address</label>
+            <input type="text" value="<%= current_user.complete_address %>" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled>
+            
+            </div>
+        </div>
+
+
+
+
+          <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+
+            <div class="form-item w-full">
+              <label class="text-xl ">Student ID</label>
+              <input type="text" value="<%= current_user.id_number %>" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled>
+            </div>
+
+            <div class="form-item w-full">
+              <label class="text-xl ">Contact Number</label>
+              <input type="text" value="<%= current_user.contact_num %>" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled>
+            </div>
+          </div>
+		 
+        </form>
+      </div>
+    </div>
+
+    <%= form_with model: @health_declaration do |form| %>
+    <div class="shadow-lg rounded-lg container mx-auto xl:w-3/4 lg:w-11/12 bg-gray-100 my-6">
+      <div class= "py-6 text-left container mx-auto px-10 xl:w-3/4 lg:w-11/12 font-bold text-1xl">
+      <h1>Are you currently experiencing any of the following symptoms? if yes, please mark the symptoms.</h1>
+      
+      </div>
+
+<div class="px-10  mx-auto flex-col sm:flex overflow-hidden xl:w-3/4 lg:w-11/12">
+
+
+<div class="my-2 px-2  overflow-hidden">
+<!-- Column Content -->
+<label class="inline-flex items-center mr-2">
+      <%= check_box_tag(:fever) %>
+      <%= hidden_field_tag :fever, 'true' %>
+      <span class="ml-2">Fever(Lagnat)</span>
+    </label>
+</div>
+
+<div class="my-2 px-2 overflow-hidden">
+<!-- Column Content -->
+<label class="inline-flex items-center mr-2">
+    <input type="checkbox" class="form-checkbox">
+    <span class="ml-2">Sore throat(Pananakit ng lalamunan)</span>
+  </label>
+</div>
+
+<div class="my-2 px-2  overflow-hidden">
+<!-- Column Content -->
+<label class="inline-flex items-center mr-2">
+<input type="checkbox" class="form-checkbox">
+<span class="ml-2">Diarrhea(Pagdudumi)</span>
+</label>
+</div>
+
+<div class="my-2 px-2  overflow-hidden">
+<!-- Column Content -->
+<label class="inline-flex items-center mr-2">
+<input type="checkbox" class="form-checkbox">
+<span class="ml-2">Shortness of breath (Hirap sa paghinga) </span>
+</label>
+</div>
+
+<div class="my-2 px-2 overflow-hidden">
+<!-- Column Content -->
+<label class="inline-flex items-center mr-2">
+<input type="checkbox" class="form-checkbox">
+<span class="ml-2">N/A </span>
+</label>
+</div>
+
+</div>
+
+
+
+<div class= "text-left container mx-auto px-10 xl:w-3/4 lg:w-11/12 font-bold text-1xl">
+
+
+<div class="mt-4 text-gray-700" >
+  <span class="text-gray-700">Have you had contact with anyone with fever, cough,colds, or sore throat in the past two weeks? (Mayroon ka bang nakasama an may lagnat, ubo, sipon o sakit ng lalamunan sa nakalipas na dalawang linggo?)*</span>
+  <div class="mt-4 font-semibold">
+    <label class="inline-flex items-center">
+      <input type="radio" class="form-radio" name="accountType" value="personal">
+      <span class="ml-2">Yes (oo)</span>
+    </label>
+    <label class="inline-flex items-center ml-6">
+      <input type="radio" class="form-radio" name="accountType" value="busines">
+      <span class="ml-2">No (Hindi)</span>
+    </label>
+  </div>
+</div>
+</div>
+<div class="justify-center flex p-4">
+<button class="  bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<span>Add Record</span>
+</button>
+</div>
+<div>
+
+<%end%>
