@@ -1,0 +1,70 @@
+<%= form_with model: @health, class: "form", local: true do |form| %>
+    <div class="shadow-lg rounded-lg container mx-auto xl:w-3/4 lg:w-11/12 bg-gray-100 my-6">
+      <div class= "py-6 text-left container mx-auto px-10 xl:w-3/4 lg:w-11/12 font-bold text-1xl">
+      <h1>Are you currently experiencing any of the following symptoms? if yes, please mark the symptoms.</h1>
+      </div>
+
+<div class="px-10  mx-auto flex-col sm:flex overflow-hidden xl:w-3/4 lg:w-11/12">
+
+
+<div class="my-2 px-2  overflow-hidden">
+<!-- Column Content -->
+  <%= form.check_box :fever %>
+  <%=form.label :fever, :class => "inline-flex items-center mr-2"%>
+</div>
+
+<div class="my-2 px-2 overflow-hidden">
+<!-- Column Content -->
+  <%= form.check_box :sore_throat %>
+  <%=form.label :sore_throat, :class => "inline-flex items-center mr-2"%>
+</div>
+
+<div class="my-2 px-2  overflow-hidden">
+<!-- Column Content -->
+  <%= form.check_box :diarrhea %>
+  <%=form.label :diarrhea, :class => "inline-flex items-center mr-2"%>
+</div>
+
+<div class="my-2 px-2  overflow-hidden">
+<!-- Column Content -->
+  <%= form.check_box :shortness_of_breath %>
+  <%=form.label :shortness_of_breath, :class => "inline-flex items-center mr-2"%>
+</div>
+
+<div class="my-2 px-2 overflow-hidden">
+<!-- Column Content -->
+  <%= form.check_box :n_a%>
+  <%=form.label :n_a, :class => "inline-flex items-center mr-2"%>
+  </div>
+
+</div>
+
+
+<div class= "text-left container mx-auto px-10 xl:w-3/4 lg:w-11/12 font-bold text-1xl">
+
+
+<div class="mt-4 text-gray-700" >
+  <span class="text-gray-700">Have you had contact with anyone with fever, cough,colds, or sore throat in the past two weeks? (Mayroon ka bang nakasama an may lagnat, ubo, sipon o sakit ng lalamunan sa nakalipas na dalawang linggo?)*</span>
+  <div class="mt-4 font-semibold">
+    <label class="inline-flex items-center">
+    <%= form.radio_button(:cold, "true")%> 
+      <span class="ml-2">Yes (oo)</span>
+    </label>
+    <label class="inline-flex items-center ml-6">
+    <%= form.radio_button(:cold, "false")%> 
+      <span class="ml-2">No (Hindi)</span>
+    </label>
+  </div>
+</div>
+</div>
+<div class="justify-center flex p-4">
+<button class="  bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+<%= form.submit :Save, :class => "text-white bg-red-900 font-bold"%>
+</button>
+</div>
+<div>
+
+<%end%>
