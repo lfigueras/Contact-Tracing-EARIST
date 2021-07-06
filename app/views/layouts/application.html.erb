@@ -3,9 +3,11 @@
   <head>
     <title>Contact Tracing</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+  
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"></link>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script defer="defer" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,4 +17,6 @@
   <%= render "shared/nav" %>
     <%= yield %>
   </body>
+  <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+  <script src="https://unpkg.com/tailwindcss-stimulus-components/dist/tailwindcss-stimulus-components.umd.js"></script>
 </html>
