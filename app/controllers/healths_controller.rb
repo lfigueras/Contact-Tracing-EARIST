@@ -6,12 +6,13 @@ class HealthsController < ApplicationController
 	end
 
 	def create
-		binding.pry
+	
 		@health  = Health.new(health_params)
-		@health.user_id = current_user.id
-	
-	
-	
+		if user_signed_in?	
+			@health.user_id = current_user.id
+		else
+			@health.user_id = Visitor.last.id
+		end
 		if @health.save
 		 redirect_to root_path
 	   end
