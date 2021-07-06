@@ -1,3 +1,6 @@
+
+<%= render "shared/modal_alert" %>
+
 <section class="py-5 2xl:py-40 bg-gray-100">
 
   <div class=" container px-4 mx-auto">
@@ -16,9 +19,11 @@
               <div class="mb-6 py-px bg-gray-500"></div>
               <h3 class="mb-8 lg:mb-4 text-xl font-bold">Stay at home, stay healthy, and stay safe!</h3>
               <div class="md:text-right">
+              <% if !user_signed_in? %> 
               <a class="inline-block bg-red-900 py-3 px-5 text-white mb-4 font-bold border border-gray-300 hover:border-gray-200 rounded-lg mr-3" href="/visitors/new">Visitor</a>
+              <%end%>
               <a class="inline-block bg-red-900 py-3 px-5 text-white mb-4 font-bold border border-gray-300 hover:border-gray-200 rounded-lg mr-3" href="<%=new_user_session_path%>">Daily User</a>
-
+              
               </div>
             </div>
           </div>
@@ -32,3 +37,4 @@
     </div>
   </div>
 </section>
+

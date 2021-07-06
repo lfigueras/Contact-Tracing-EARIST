@@ -15,6 +15,7 @@ class HealthsController < ApplicationController
 		end
 		if @health.save
 		 redirect_to root_path
+		 flash[:notice] = "Required** Click buttoon below"
 	   end
 	   respond_to do |format|
 		format.js
