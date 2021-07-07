@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_06_064255) do
+ActiveRecord::Schema.define(version: 2021_07_07_052849) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_07_06_064255) do
     t.string "role"
     t.integer "id_number"
     t.string "complete_address"
-    t.integer "contact_num"
+    t.string "contact_num"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_07_06_064255) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "email"
-    t.integer "phone_num"
+    t.string "phone_num"
     t.decimal "temperature"
     t.string "occupation"
     t.integer "id_num"
