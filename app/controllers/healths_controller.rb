@@ -11,10 +11,11 @@ class HealthsController < ApplicationController
 		if user_signed_in?	
 			@health.user_id = current_user.id
 		else
-			@health.user_id = Visitor.last.id
+		@health.user_id = Visitor.last.id_num
 		end
 		if @health.save
 		 redirect_to root_path
+		 flash[:notice] = "Required** Click the button below"
 	   end
 	   respond_to do |format|
 		format.js

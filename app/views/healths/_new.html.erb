@@ -1,71 +1,96 @@
-
 <%= form_for(Health.new, remote: true) do |form| %>
-    <div class="shadow-lg rounded-lg container mx-auto xl:w-3/4 lg:w-11/12 bg-gray-100 my-6">
-      <div class= "py-6 text-left container mx-auto px-10 xl:w-3/4 lg:w-11/12 font-bold text-1xl">
-      <h1>Are you currently experiencing any of the following symptoms? if yes, please mark the symptoms.</h1>
+<div class="mt-10 sm:mt-0 p-10">
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="md:col-span-1">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Health Declaration</h3>
+        <p class="pt-5">It is important to ensure workers and individuals entering the workplaces and
+        production sites are healthy to assist in combating the spread of COVID-19. It will
+        also assist in meeting obligations for the recording of people's movements to enable
+        contact tracing if required.</p>
       </div>
+    </div>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <form action="#" method="POST">
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+            <fieldset>
+              <legend class="text-base font-medium text-gray-900">Are you currently experiencing any of the following symptoms? if yes, please mark the symptoms</legend>
+              <div class="mt-4 space-y-4">
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <%= form.check_box :fever, :class=>"focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="comments" class="font-medium text-gray-700">Fever</label>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <%= form.check_box :sore_throat, :class=>"focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="candidates" class="font-medium text-gray-700">Sore throat</label>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <%= form.check_box :diarrhea, :class=>"focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"%>
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="offers" class="font-medium text-gray-700">Diarrhea</label>
+                  </div>
+                </div>
 
-<div class="px-10  mx-auto flex-col sm:flex overflow-hidden xl:w-3/4 lg:w-11/12">
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                  <%= form.check_box :shortness_of_breath, :class=>"focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"%>
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="offers" class="font-medium text-gray-700">Shortness of breath</label>
+                  </div>
+                </div>
 
+                <div class="flex items-start">
+                <div class="flex items-center h-5">
+                  <%= form.check_box :n_a, :class=>"focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"%>
 
-<div class="my-2 px-2  overflow-hidden">
-<!-- Column Content -->
-  <%= form.check_box :fever %>
-  <%=form.label :fever, :class => "inline-flex items-center mr-2"%>
-</div>
+                </div>
+                <div class="ml-3 text-sm">
+                  <label for="offers" class="font-medium text-gray-700">N/A</label>
+                </div>
+              </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div>
+                <legend class="text-base font-medium text-gray-900">Have you had contact with anyone with fever, cough,colds, or sore throat in the past two weeks?</legend>
+              </div>
+              <div class="mt-4 space-y-4">
+               
+                <div class="flex items-center">
+                  <%= form.radio_button(:cold, "true")%> 
 
-<div class="my-2 px-2 overflow-hidden">
-<!-- Column Content -->
-  <%= form.check_box :sore_throat %>
-  <%=form.label :sore_throat, :class => "inline-flex items-center mr-2"%>
-</div>
-
-<div class="my-2 px-2  overflow-hidden">
-<!-- Column Content -->
-  <%= form.check_box :diarrhea %>
-  <%=form.label :diarrhea, :class => "inline-flex items-center mr-2"%>
-</div>
-
-<div class="my-2 px-2  overflow-hidden">
-<!-- Column Content -->
-  <%= form.check_box :shortness_of_breath %>
-  <%=form.label :shortness_of_breath, :class => "inline-flex items-center mr-2"%>
-</div>
-
-<div class="my-2 px-2 overflow-hidden">
-<!-- Column Content -->
-  <%= form.check_box :n_a%>
-  <%=form.label :n_a, :class => "inline-flex items-center mr-2"%>
+                  <label for="push-email" class="ml-3 block text-sm font-medium text-gray-700">
+                    Yes
+                  </label>
+                </div>
+                <div class="flex items-center">
+                  <%= form.radio_button(:cold, "false")%> 
+                  <label for="push-nothing" class="ml-3 block text-sm font-medium text-gray-700">
+                    No 
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <%= form.submit :Save,  :class=> "text-white bg-red-900 font-bold inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-
 </div>
-
-
-<div class= "text-left container mx-auto px-10 xl:w-3/4 lg:w-11/12 font-bold text-1xl">
-
-
-<div class="mt-4 text-gray-700" >
-  <span class="text-gray-700">Have you had contact with anyone with fever, cough,colds, or sore throat in the past two weeks? (Mayroon ka bang nakasama an may lagnat, ubo, sipon o sakit ng lalamunan sa nakalipas na dalawang linggo?)*</span>
-  <div class="mt-4 font-semibold">
-    <label class="inline-flex items-center">
-    <%= form.radio_button(:cold, "true")%> 
-      <span class="ml-2">Yes (oo)</span>
-    </label>
-    <label class="inline-flex items-center ml-6">
-    <%= form.radio_button(:cold, "false")%> 
-      <span class="ml-2">No (Hindi)</span>
-    </label>
-  </div>
-</div>
-</div>
-<div class="justify-center flex p-4">
-<button class="  bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-<%= form.submit :Save, :class => "text-white bg-red-900 font-bold"%>
-</button>
-</div>
-<div>
-
 <%end%>
+

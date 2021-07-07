@@ -1,4 +1,4 @@
 class Visitor < ApplicationRecord
-    has_many :healths,  :class_name => "Health"
+    has_many :healths
     
 end

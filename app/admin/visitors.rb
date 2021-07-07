@@ -14,5 +14,18 @@ ActiveAdmin.register Visitor do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  index do
+    column :id
+    column :id_num
+    column :name
+    column :email
+    column :phone_num
+    column :temperature
+    column :occupation
+    column :age
+    column :complete_address
+    column :address
+  end
   
 end
