@@ -10,7 +10,7 @@ class VisitorsController < ApplicationController
       
 		  if @visitors.save
         redirect_to  new_visitor_path
-        flash[:notice] = "Required** Click buttoon below"
+        flash[:notice] = "Required** Click button below"
   
       end
        

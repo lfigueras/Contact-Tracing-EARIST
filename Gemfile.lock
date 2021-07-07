@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/vigetlabs/active_material.git
+  revision: b898ffea7a6c3549d9f62a5cf672a1a0a6eebd30
+  specs:
+    active_material (1.5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -261,6 +267,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_material!
   activeadmin
   bootsnap (>= 1.4.4)
   byebug

@@ -14,5 +14,15 @@ ActiveAdmin.register Health do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
+  index do
+    column :id
+    column :fever
+    column :sore_throat
+    column :diarrhea
+    column :shortness_of_breath
+    column :cold
+    column :n_a
+    column :user_id
+  end
 end

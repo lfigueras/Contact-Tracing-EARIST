@@ -1,4 +1,5 @@
 ActiveAdmin.setup do |config|
+  
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -16,7 +17,7 @@ ActiveAdmin.setup do |config|
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  # config.site_title_image = "defaultlogo.png"
 
   # == Default Namespace
   #
@@ -157,7 +158,7 @@ ActiveAdmin.setup do |config|
   # You can exclude possibly sensitive model attributes from being displayed,
   # added to forms, or exported by default by ActiveAdmin
   #
-  config.filter_attributes = [:encrypted_password, :password, :password_confirmation]
+
 
   # == Localize Date/Time Format
   #
