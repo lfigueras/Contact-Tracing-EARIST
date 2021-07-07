@@ -1,7 +1,7 @@
 <header x-data="{ mobileMenuOpen : false }"  class="flex sticky bg-white flex-wrap flex-row justify-between md:items-center md:space-x-4  border shadow py-6 px-6 shadow mx-auto sticky top-0">
 		<a href="/" class="block">
 		  <span class="sr-only">contact trace</span>
-		  <%= image_tag("deafaultlogo", class: "h-8 md:h8") %>
+		  <%= image_tag("deafaultlogo.png", class: "h-8 md:h8") %>
 		</a>
 		<% if current_user %>
 		<button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1">
