@@ -24,6 +24,7 @@ ActiveAdmin.register Visitor do
     column :occupation
     column :age
     column :address
+    column :created_at
   end
   
 end
