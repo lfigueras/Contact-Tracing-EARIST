@@ -17,6 +17,7 @@ ActiveAdmin.register Health do
 
   index do
     column :id
+    column :temperature
     column :fever
     column :sore_throat
     column :diarrhea
