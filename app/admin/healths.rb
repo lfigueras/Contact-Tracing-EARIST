@@ -25,5 +25,6 @@ ActiveAdmin.register Health do
     column :cold
     column :n_a
     column :user_id
+    column :created_at
   end
 end
