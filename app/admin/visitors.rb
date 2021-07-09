@@ -21,7 +21,6 @@ ActiveAdmin.register Visitor do
     column :name
     column :email
     column :phone_num
-    column :temperature
     column :occupation
     column :age
     column :address
