@@ -15,6 +15,8 @@
         <div class="shadow overflow-hidden sm:rounded-md">
           <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
             <fieldset>
+            <legend class="text-base font-medium text-gray-900">Body Temperature</legend>
+            <%=form.number_field :temperature, :class=>"w-full -ml-0 sm:w-1/2 m-2 px-5 py-1 text-gray-700 bg-gray-200 rounded", :id=>"cus_temp",  :type=>"text", :required=>"", :placeholder=>"Your Body Temperature", :"aria-label"=>"Body Temperature", :style=>"background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" %>
               <legend class="text-base font-medium text-gray-900">Are you currently experiencing any of the following symptoms? if yes, please mark the symptoms</legend>
               <div class="mt-4 space-y-4">
                 <div class="flex items-start">

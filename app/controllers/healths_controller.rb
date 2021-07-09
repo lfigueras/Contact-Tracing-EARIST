@@ -24,6 +24,6 @@ class HealthsController < ApplicationController
 
 	private
   def health_params
-    params.require(:health).permit(:fever, :sore_throat, :diarrhea, :shortness_of_breath, :n_a, :cold, :user_id)
+    params.require(:health).permit(:fever, :sore_throat, :diarrhea, :shortness_of_breath, :n_a, :cold, :user_id, :temperature)
   end
 end
