@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_07_052849) do
+ActiveRecord::Schema.define(version: 2021_07_09_090008) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2021_07_07_052849) do
     t.boolean "n_a", default: false
     t.boolean "cold", default: false
     t.integer "user_id"
+    t.decimal "temperature"
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,7 +76,6 @@ ActiveRecord::Schema.define(version: 2021_07_07_052849) do
     t.string "name"
     t.string "email"
     t.string "phone_num"
-    t.decimal "temperature"
     t.string "occupation"
     t.integer "id_num"
     t.integer "age"
