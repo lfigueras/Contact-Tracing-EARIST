@@ -24,7 +24,6 @@ ActiveAdmin.register Visitor do
     column :temperature
     column :occupation
     column :age
-    column :complete_address
     column :address
   end
   
