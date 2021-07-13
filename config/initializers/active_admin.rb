@@ -1,7 +1,4 @@
 ActiveAdmin.setup do |config|
-  meta_tags_options = { viewport: 'width=device-width, initial-scale=1' }
-  config.meta_tags = meta_tags_options
-  config.meta_tags_for_logged_out_pages = meta_tags_options
   
   # == Site Title
   #
@@ -147,7 +144,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = false
+  config.batch_actions = true
 
   # == Controller Filters
   #
@@ -321,7 +318,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  config.footer = 'Contact Tracing Version 2.0'
+  config.footer = 'Contact Tracing Version 1.2'
 
   # == Sorting
   #

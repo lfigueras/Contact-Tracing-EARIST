@@ -1,2 +1,2 @@
-import "@fortawesome/fontawesome-free/css/all.css";
-import 'arctic_admin'
+//= require active_admin/base
+
