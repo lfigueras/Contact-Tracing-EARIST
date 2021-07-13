@@ -8,23 +8,11 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
+$primary-color: #8D2828;
+@import "arctic_admin/base";
 
-@import "active_admin/mixins";
-@import "active_admin/base";
 
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #7F1D1D; }
-.header{
-    background:#7F1D1D !important;
-    padding: 1rem !important;
-}
-.site_title {
-    color: white !important;
-    font-weight: bold  !important;
-
-}
-.blank_slate{
-    content:    "hey " !important;
-}
