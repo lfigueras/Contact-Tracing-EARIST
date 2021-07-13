@@ -25,6 +25,7 @@ ActiveAdmin.register User do
     column :complete_address
     column :id_number
     column :contact_num
+    actions
   end
   
 end
