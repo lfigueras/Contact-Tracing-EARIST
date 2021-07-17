@@ -11,7 +11,7 @@ class HealthsController < ApplicationController
 		if user_signed_in?	
 			@health.user_id = current_user.id
 		else
-		@health.user_id = Visitor.last.id_num
+		@health.name = Visitor.last.name
 		end
 		if @health.save
 		 redirect_to root_path
