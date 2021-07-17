@@ -20,6 +20,7 @@ ActiveAdmin.register Health do
   end
 
   index do
+    selectable_column
     column :id
     column :temperature
     column :fever
