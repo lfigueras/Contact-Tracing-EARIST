@@ -16,6 +16,7 @@ ActiveAdmin.register Visitor do
   # end
 
   index do
+    selectable_column
     column :id
     column :id_num
     column :name
