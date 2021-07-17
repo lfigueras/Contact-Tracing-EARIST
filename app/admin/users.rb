@@ -15,6 +15,7 @@ ActiveAdmin.register User do
   #   permitted
   # end
   index do
+    selectable_column
     column :id
     column :email
     column :created_at
