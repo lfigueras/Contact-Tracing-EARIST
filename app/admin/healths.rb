@@ -28,7 +28,7 @@ ActiveAdmin.register Health do
     column :shortness_of_breath
     column :cold
     column :n_a
-    column :user_id
+    column :name
     column :created_at
     actions 
   end
