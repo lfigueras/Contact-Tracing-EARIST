@@ -14,6 +14,10 @@ ActiveAdmin.register Health do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+  form do |f|
+    f.inputs
+    f.actions
+  end
 
   index do
     column :id
@@ -26,6 +30,7 @@ ActiveAdmin.register Health do
     column :n_a
     column :user_id
     column :created_at
-    actions
+    actions 
   end
+  
 end
