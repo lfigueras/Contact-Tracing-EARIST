@@ -31,7 +31,6 @@ ActiveAdmin.register Health do
     column :n_a
     column :name
     column :created_at
-    actions 
   end
   
 end
